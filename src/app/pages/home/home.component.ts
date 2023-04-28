@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  clickRollsafe(){
+    window.open('https://mobility.halobizapps.com/', '_blank');
+  }
+  clickContract(){
+    window.open('https://halobiz-contract-mgmt.web.app', '_blank');
+
+  }
 }
