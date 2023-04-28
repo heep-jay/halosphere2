@@ -1,0 +1,33 @@
+.footer {
+  padding: 2rem;
+  width: 100%;
+  background: #e0ab10;
+}
+.footer-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo {
+  width: 190px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  list-style: none;
+  font-size: clamp(0.74375rem, 0.7401rem + 0.4737vw, 1.125rem);
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
