@@ -19,10 +19,14 @@
   align-items: center;
   gap: 1.3rem;
   list-style: none;
+  cursor: pointer;
+}
+.footer-links a {
+  text-decoration: none;
   font-size: clamp(0.74375rem, 0.7401rem + 0.4737vw, 1.125rem);
   font-weight: 700;
   white-space: nowrap;
-  cursor: pointer;
+  color: black;
 }
 
 @media screen and (max-width: 750px) {
