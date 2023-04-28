@@ -1,17 +1,31 @@
 .home {
-  /* background: url("/assets/bg4.png"); */
+  background: url("/assets/clo.png");
+  position: relative;
   width: 100%;
   /* height: 100vh; */
-  background-size: cover;
+  background-size: 100vw 33vh;
   /* background-size: 100% 20%; */
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: top left;
+}
+.bird-one,
+.bird-two {
+  width: 50px;
+  position: absolute;
+}
+.bird-one {
+  left: 30%;
+  top: 110px;
+}
+.bird-two {
+  right: 24%;
+  top: 150px;
 }
 
 .hero-section {
   width: 100%;
   padding: 0rem 2rem;
-  padding-top: 10rem;
+  padding-top: 15rem;
 }
 .hero-container {
   width: 100%;
@@ -24,7 +38,7 @@
 .hero-text {
   text-align: center;
   width: 60%;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
 }
 .hero-text h1 {
   font-size: clamp(2.5rem, 1.4638rem + 4.7368vw, 5.3125rem);
@@ -54,34 +68,20 @@
 }
 
 .product-section {
-  /* height: 600px; */
-  margin-top: -150px;
+  height: 600px;
+  margin-top: -195px;
   width: 100%;
+  height: 100%;
 
-  background: hsla(228, 51%, 77%, 1);
+  background: url("/assets/svg.png");
+  background-size: cover;
 
-  background: linear-gradient(
-    0deg,
-    hsla(228, 51%, 77%, 1) 0%,
-    hsla(228, 57%, 25%, 1) 100%
-  );
-
-  background: -moz-linear-gradient(
-    0deg,
-    hsla(228, 51%, 77%, 1) 0%,
-    hsla(228, 57%, 25%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    0deg,
-    hsla(228, 51%, 77%, 1) 0%,
-    hsla(228, 57%, 25%, 1) 100%
-  );
+  background-position: top left;
 }
 
 .product-container {
   width: 100%;
-  padding: 6rem 2rem 4rem;
+  padding: 10rem 2rem 4rem;
 }
 .product-container h1 {
   font-size: clamp(1.75rem, 1.1974rem + 2.5263vw, 3.25rem);
@@ -104,10 +104,10 @@
 }
 
 .platform {
-  width: 400px;
+  width: 370px;
   display: flex;
   flex-direction: column;
-  gap: 1.3rem;
+  gap: 1rem;
   /* background: #000; */
 }
 .platform img {
@@ -163,5 +163,22 @@
   }
   .product-container {
     padding-top: 8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home {
+    background-size: contain;
+  }
+
+  .hero-text {
+    margin-bottom: 4rem;
+  }
+  .hero-img img {
+    width: 100%;
+    max-width: 250px;
+  }
+  .product-container {
+    padding-top: 14rem;
   }
 }
