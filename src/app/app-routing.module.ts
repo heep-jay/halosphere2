@@ -3,12 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { HomeComponent } from './pages/home/home.component';
+import { TermofuseComponent } from './pages/termofuse/termofuse.component';
+
+
 const routes: Routes = [
 
   {
     component: HomeComponent,
     path: ''
+  },
+  {
+    component: TermofuseComponent,
+    path: 'terms-of-use'
   }
+
 ];
 
 @NgModule({
