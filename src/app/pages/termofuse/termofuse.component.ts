@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,7 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./termofuse.component.css']
 })
 export class TermofuseComponent {
-  constructor() { }
+  scrollIntoViewOptions:any;
+  constructor(private vps:ViewportScroller){
+  }
+
   ngOnInit(): void {
     window.scrollTo(0, 0);
   }
@@ -17,6 +21,12 @@ export class TermofuseComponent {
     var offsetPosition = element! + window.pageYOffset - headerOffset;
     window.scrollTo({ top: offsetPosition, behavior: "smooth" });
   }
+
+
+  scrollToTop(el: HTMLElement) {
+    el.scrollIntoView({block: "center", inline: "nearest", behavior: "smooth"});
+}
+
   print() {
     window.print();
   }

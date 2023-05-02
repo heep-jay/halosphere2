@@ -16,48 +16,52 @@
     <div class="privacy-headers">
       <div class="privacy-contents">
         <div class="contentLeft">
-          <p class="policyHeading" (click)="scrolll('agreement')">
+          <p class="policyHeading" (click)="scrollToTop(agree)">
             Agreement between Client and Halogen Group
           </p>
-          <p class="policyHeading" (click)="scrolll('app')">Applicability</p>
-          <p class="policyHeading" (click)="scrolll('booking')">
+          <p class="policyHeading" (click)="scrollToTop(app)">Applicability</p>
+          <p class="policyHeading" (click)="scrollToTop(booking)">
             Booking Requirements
           </p>
-          <p class="policyHeading" (click)="scrolll('rates')">Rates</p>
-          <p class="policyHeading" (click)="scrolll('payments')">
+          <p class="policyHeading" (click)="scrollToTop(rates)">Rates</p>
+          <p class="policyHeading" (click)="scrollToTop(payments)">
             Payments, Bank and Credit Card Fees
           </p>
-          <p class="policyHeading" (click)="scrolll('client')">
+          <p class="policyHeading" (click)="scrollToTop(client)">
             Client Requirements
           </p>
-          <p class="policyHeading" (click)="scrolll('cancel-h')">
+          <p class="policyHeading" (click)="scrollToTop(cancelh)">
             Cancellation/Change by Halogen Group
           </p>
-          <p class="policyHeading" (click)="scrolll('cancel-c')">
+          <p class="policyHeading" (click)="scrollToTop(cancelc)">
             Cancellation/Change by Client
           </p>
-          <p class="policyHeading" (click)="scrolll('third')">
+          <p class="policyHeading" (click)="scrollToTop(third)">
             Third Party Service Providers
           </p>
-          <p class="policyHeading" (click)="scrolll('epidemic')">Epidemic</p>
-          <p class="policyHeading" (click)="scrolll('refusal')">
+          <p class="policyHeading" (click)="scrollToTop(epidemic)">Epidemic</p>
+          <p class="policyHeading" (click)="scrollToTop(refusal)">
             Refusal of Service, Price & Currency Rate fluency
           </p>
-          <p class="policyHeading" (click)="scrolll('indemnity')">Indemnity</p>
-          <p class="policyHeading" (click)="scrolll('special')">
+          <p class="policyHeading" (click)="scrollToTop(indemnity)">
+            Indemnity
+          </p>
+          <p class="policyHeading" (click)="scrollToTop(special)">
             Special Request
           </p>
-          <p class="policyHeading" (click)="scrolll('terms')">Terms of Use</p>
-          <p class="policyHeading" (click)="scrolll('liability')">Liability</p>
-          <p class="policyHeading" (click)="scrolll('general')">. General</p>
-          <p class="policyHeading" (click)="scrolll('notices')">Notices</p>
-          <p class="policyHeading" (click)="scrolll('dispute')">
+          <p class="policyHeading" (click)="scrollToTop(terms)">Terms of Use</p>
+          <p class="policyHeading" (click)="scrollToTop(liability)">
+            Liability
+          </p>
+          <p class="policyHeading" (click)="scrollToTop(general)">. General</p>
+          <p class="policyHeading" (click)="scrollToTop(notices)">Notices</p>
+          <p class="policyHeading" (click)="scrollToTop(dispute)">
             Dispute Resolution & Governing Law
           </p>
         </div>
 
         <div class="contentRight">
-          <div class="policyDescription" id="agreement">
+          <div class="policyDescription" #agree id="agreement">
             <h4 class="policyMainHeader">
               Agreement between Client and Halogen Group
             </h4>
@@ -83,7 +87,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="app">
+          <div class="policyDescription" #app id="app">
             <h4 class="policyMainHeader">Applicability</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -112,7 +116,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="booking">
+          <div class="policyDescription" #booking id="booking">
             <h4 class="policyMainHeader">Booking Requirements</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -175,7 +179,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="rates">
+          <div class="policyDescription" #rates id="rates">
             <h4 class="policyMainHeader">Rates</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -211,7 +215,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="payments">
+          <div class="policyDescription" #payments id="payments">
             <h4 class="policyMainHeader">
               Payments, Bank and Credit Card Fees
             </h4>
@@ -359,7 +363,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="client">
+          <div class="policyDescription" #client id="client">
             <h4 class="policyMainHeader">Client requirements</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -397,7 +401,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="cancel-h">
+          <div class="policyDescription" #cancelh id="cancel-h">
             <h4 class="policyMainHeader">
               Cancellation/Change by Halogen Group
             </h4>
@@ -434,7 +438,7 @@
               </li>
             </div>
           </div>
-          <div class="policyDescription" id="cancel-c">
+          <div class="policyDescription" #cancelc id="cancel-c">
             <h4 class="policyMainHeader">Cancellation/Change by Client</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -490,7 +494,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="third">
+          <div class="policyDescription" #third id="third">
             <h4 class="policyMainHeader">Third Party Service Providers</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -514,7 +518,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="epidemic">
+          <div class="policyDescription" #epidemic id="epidemic">
             <h4 class="policyMainHeader">Epidemic</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -550,7 +554,47 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="indemnity">
+          <div class="policyDescription" #refusal id="refusal">
+            <h4 class="policyMainHeader">
+              Refusal of Service, Price & Currency Rate fluency
+            </h4>
+            <hr />
+            <div class="policyDescriptionText">
+              <ul style="padding-left: 20px">
+                <li>
+                  Halogen reserves the right at any time to refuse service to
+                  any customer or any end users. Reasons for refusal may include
+                  but are not limited to:
+                  <ul>
+                    <li>
+                      If the Customer is disruptive and/or is exhibiting unruly
+                      behavior, lacks proper documentation
+                    </li>
+                    <li>
+                      If the Customer is disruptive and/or is exhibiting unruly
+                      behavior, lacks proper documentation
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  The price of any Service is the price in force at the date and
+                  time of your booking. The price of any service may be changed
+                  before the completion of your booking. We will on our part
+                  ensure that the prices displayed on the Rollsafe platform is
+                  accurate. However, the price on your booking will need to be
+                  validated by us as part of our acceptance procedure.
+                </li>
+                <li>
+                  Currency rates on our Roll Safe Platform are for reference and
+                  information purposes only. They should not be relied upon as
+                  accurate or real-time as actual rates may vary, and your
+                  payment provider (e.g., your credit card company) may charge
+                  conversion fees and apply another date’s currency rate
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="policyDescription" #indemnity id="indemnity">
             <h4 class="policyMainHeader">Indemnity</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -570,7 +614,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="special">
+          <div class="policyDescription" #special id="special">
             <h4 class="policyMainHeader">Special Request</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -585,7 +629,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="terms">
+          <div class="policyDescription" #terms id="terms">
             <h4 class="policyMainHeader">Terms of Use</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -598,7 +642,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="liability">
+          <div class="policyDescription" #liability id="liability">
             <h4 class="policyMainHeader">Liability</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -659,7 +703,7 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="general">
+          <div class="policyDescription" #general id="general">
             <h4 class="policyMainHeader">General</h4>
             <hr />
             <div class="policyDescriptionText">
@@ -678,7 +722,44 @@
               </ul>
             </div>
           </div>
-          <div class="policyDescription" id="notices">
+          <div class="policyDescription" #notices id="notices">
+            <h4 class="policyMainHeader">Dispute Resolution & Governing Law</h4>
+            <hr />
+            <div class="policyDescriptionText">
+              <ul>
+                <li>
+                  <div class="policyDescription" #notices id="notices">
+                    <h4 class="policyMainHeader">Notices</h4>
+                    <hr />
+                    <div class="policyDescriptionText">
+                      <ul>
+                        <li>
+                          All notices shall be given via our relevant emails;
+                          and
+                        </li>
+                        <li>
+                          To Client via the email or postal address provided
+                          during any booking process.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  Any difference, dispute or claim arising out of or in
+                  connection with these Terms and Conditions shall first be
+                  referred by either party to mediation and where parties are
+                  unable to settle after the mediation session, refer the matter
+                  to conciliation either privately amongst the parties or in
+                  accordance with the Arbitration and Conciliation Act 1988
+                  CAP.A18 in order to seek an amicable settlement of the dispute
+                  in good faith. The decision of the Conciliator shall be final
+                  and binding on both parties.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="policyDescription" #dispute id="disputes">
             <h4 class="policyMainHeader">Dispute Resolution & Governing Law</h4>
             <hr />
             <div class="policyDescriptionText">
