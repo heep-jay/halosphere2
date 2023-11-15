@@ -107,10 +107,17 @@
         <div class="product-container">
           <div class="search">
             <mat-icon>search</mat-icon>
-            <input type="text" name="search" placeholder="Search..." id="" />
+            <input
+              type="text"
+              [(ngModel)]="searchTerm"
+              (keyup)="onSearch()"
+              name="searchTerm"
+              placeholder="Search..."
+              id=""
+            />
           </div>
           <div class="platforms">
-            <div class="platform">
+            <!-- <div class="platform">
               <img src="/assets/rollimg.png" alt="" />
               <div class="platform-description">
                 <img src="/assets/rollsafe.png" alt="" />
@@ -276,6 +283,56 @@
                   alt=""
                 />
               </div>
+            </div> -->
+            <div class="platform" *ngFor="let product of filteredItems">
+              <img
+                src="{{ product.attributes.productImage.data.attributes.url }}"
+                alt=""
+              />
+              <div class="platform-description">
+                <img
+                  src="{{ product.attributes.productLogo.data.attributes.url }}"
+                  alt=""
+                />
+                <div class="plat-text">
+                  <h3>{{ product.attributes.productName }}</h3>
+                  <p>
+                    {{ product.attributes.productDescription }}
+                  </p>
+                  <p class="review">
+                    4.5 &nbsp;
+                    <span class="material-symbols-outlined"> star </span>
+                    <span class="material-symbols-outlined"> star </span>
+                    <span class="material-symbols-outlined"> star </span>
+                    <span class="material-symbols-outlined"> star </span>
+                    <span class="material-symbols-outlined"> star_half </span>
+                  </p>
+                </div>
+              </div>
+              <button
+                (click)="fireWeb(product.attributes.webLink)"
+                [className]="
+                  product.attributes.productAvailability === 'Check it Out'
+                    ? 'platform-btn'
+                    : 'platform-btn soon'
+                "
+              >
+                {{ product.attributes.productAvailability }}
+              </button>
+              <div class="download-btns">
+                <img
+                  class="download-btn"
+                  (click)="fire(product.attributes.appstoreLink, content)"
+                  src="/assets/appstore.png"
+                  alt=""
+                />
+                <img
+                  class="download-btn"
+                  (click)="fire(product.attributes.appstoreLink, content)"
+                  src="/assets/playstore.png"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -288,7 +345,7 @@
         <div class="product-container">
           <div class="search">
             <mat-icon>search</mat-icon>
-            <input type="text" name="search" placeholder="Search..." id="" />
+            <input type="text" placeholder="Search..." id="" />
           </div>
           <div class="platforms">
             <div class="platform">
@@ -311,14 +368,15 @@
                   </p>
                 </div>
               </div>
-              <button class="platform-btn soon" (click)="clickContract()">
-                Not available on web
-              </button>
+              <button class="platform-btn soon">Not available on web</button>
               <div class="download-btns">
                 <img
                   class="download-btn"
                   (click)="
-                    fire('https://apps.apple.com/us/app/hars/id6467467578')
+                    fire(
+                      'https://apps.apple.com/us/app/hars/id6467467578',
+                      content
+                    )
                   "
                   src="/assets/appstore.png"
                   alt=""
